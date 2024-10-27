@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main() {
+	int n, count = 0;
+	scanf("%d\n", &n);
+	int arr[30];
+	for (int i = 0; i < n; i++) {
+		scanf("%d", &arr[i]);
+	}
+	for (int i = 0; i < n - 2; i++) {
+		if (arr[i] + arr[i + 1] > arr[i + 2] && arr[i] + arr[i + 2] > arr[i + 1] && arr[i + 1] + arr[i + 2] > arr[i]) {
+			count++;
+		}
+	}
+	printf("%d", count);
+	return 0;
+}
